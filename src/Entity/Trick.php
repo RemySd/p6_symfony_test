@@ -39,7 +39,7 @@ class Trick
     #[ORM\OneToMany(mappedBy: 'proper_trick', targetEntity: Comment::class)]
     private Collection $comments;
 
-    #[ORM\OneToMany(mappedBy: 'trick', targetEntity: TrickVideo::class)]
+    #[ORM\OneToMany(mappedBy: 'trick', targetEntity: TrickVideo::class, cascade: ['persist'])]
     private Collection $trickVideos;
 
 

@@ -83,26 +83,10 @@ class TrickType extends AbstractType
                 'entry_type' => TrickVideoType::class,
                 'label' => 'Vidéos',
                 'allow_add' => true,
-                'allow_delete' => true,
-                'prototype' => true,
                 'required' => false,
-                'mapped' => true,
+                'by_reference' => false,
                 'attr' => [
                     'class' => 'videos-collection',
-                ],
-                'entry_options' => [
-                    'attr' => [
-                        'class' => 'video-input',
-                        'placeholder' => 'Ajouter une URL de vidéo',
-                    ],
-                    'constraints' => [
-                        new NotBlank([
-                            'message' => 'Le champ "Vidéos" ne doit pas être vide.',
-                        ]),
-                        new Url([
-                            'message' => 'Veuillez saisir une URL valide pour la vidéo.',
-                        ]),
-                    ],
                 ],
                 'constraints' => [
                     new Count([
